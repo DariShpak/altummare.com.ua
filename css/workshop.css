@@ -1,3 +1,25 @@
-.workshop-page-section {
+.workshop-hero-section {
   margin-top: 80px;
+}
+
+.workshop-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-container .section-title {
+  margin-bottom: 32px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.blog-item{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
