@@ -1,0 +1,42 @@
+.services-section {
+  margin-top: 80px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.services-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .services-list {
+    gap: 64px;
+  }
+
+  .services-list-item {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-text-content {
+    max-width: 452px;
+    flex: 1;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    margin-bottom: 0;
+  }
+
+  .services-list-item {
+    flex-direction: row;
+    gap: 120px;
+    justify-content: center;
+  }
+}
