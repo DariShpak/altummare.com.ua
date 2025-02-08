@@ -34,7 +34,7 @@
   .main {
     display: flex;
     flex-direction: row;
-    width: calc(260vw + 5vw);
+    width: calc(320vw + 5vw);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -45,9 +45,11 @@
   .hero-section {
     width: 474px;
   }
+
   .hero-container .section-text-content {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
   }
 
   .section {
@@ -59,10 +61,6 @@
     height: auto;
   }
 
-  .img-description {
-    width: 358px;
-  }
-
   .blog-list {
     flex-direction: row;
     row-gap: 82px;
@@ -72,6 +70,8 @@
   .blog-item {
     padding-top: 64px;
     padding-bottom: 64px;
+    padding-left: 64px;
+    padding-right: 64px;
     align-items: center;
   }
 
@@ -93,7 +93,7 @@
   }
 
   .section img {
-    max-height: 67vh;
+    max-height: 69vh;
     max-width: 360px;
     object-fit: contain;
   }
@@ -104,5 +104,39 @@
     left: 0;
     width: 100%;
     z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    width: calc(360vw + 5vw);
+  }
+
+  .hero-section {
+    width: 583px;
+  }
+
+  .blog-list {
+    row-gap: 0;
+  }
+
+  .blog-card {
+    width: 504px;
+  }
+
+  .blog-card .img-description {
+    max-width: 504px;
+  }
+
+  .blog-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .section img {
+    max-height: 72vh;
+    object-fit: cover;
   }
 }
