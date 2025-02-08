@@ -109,7 +109,7 @@
 
 @media screen and (min-width: 1440px) {
   .main {
-    width: calc(360vw + 5vw);
+    width: calc(380vw + 5vw);
   }
 
   .hero-section {
