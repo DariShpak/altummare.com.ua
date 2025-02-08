@@ -1,0 +1,253 @@
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altum Mare</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/home-page-styles.css" />
+  </head>
+  <body>
+    <button id="scroll-to-top" class="scroll-to-top-btn home-page-scroll-btn">
+      <svg class="scroll-up-icon" width="30" height="30">
+        <use href="./images/icons/icons.svg#icon-up"></use>
+      </svg>
+    </button>
+    <header class="header">
+      <div class="container header-container">
+        <nav class="header-nav">
+          <ul class="header-nav-list list">
+            <li class="header-nav-item">Майстерня</li>
+            <li class="header-nav-item">Послуги</li>
+          </ul>
+        </nav>
+        <div class="header-logo-wrap">
+          <img
+            src="./images/logos/logo-header.png"
+            alt="логотип копанії"
+            width="180"
+          />
+        </div>
+        <nav class="header-nav-list">
+          <li class="header-nav-item">Контакти</li>
+        </nav>
+        <!-- MOB-MENU -->
+        <button class="mob-menu-btn" type="button" aria-label="Відкрити меню">
+          <svg class="mob-menu-icon" id="menu-icon" width="35" height="35">
+            <use
+              href="./images/icons/icons.svg#icon-burger"
+              class="icon-burger"
+              id="icon-burger"
+            ></use>
+            <use
+              href="./images/icons/icons.svg#icon-close"
+              class="icon-close hidden"
+              id="icon-close"
+            ></use>
+          </svg>
+        </button>
+        <nav class="mob-menu" id="mob-menu">
+          <ul class="mob-menu-list">
+            <li class="mob-menu-list-item">
+              <a href="./index.html" class="mob-menu-link link">Майстерня</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./dreams-blog.html" class="mob-menu-link link"
+                >Сновидіння</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./art-blog.html" class="mob-menu-link link"
+                >Образи в мистецтві</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./body-blog.html" class="mob-menu-link link"
+                >Тіло як провідник</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./astro-blog.html" class="mob-menu-link link"
+                >Астро-Навігація</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./reading-blog.html" class="mob-menu-link link"
+                >Читальня</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./services.html" class="mob-menu-link link">Послуги</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./contacts.html" class="mob-menu-link link">Контакти</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <ul class="socials list">
+                <li class="socials-item">
+                  <a
+                    href="https://t.me/snovydinnyapro"
+                    class="link"
+                    target="_blank"
+                    rel="no-opener no-referrer no-follow noopener norefferrer nofollow"
+                    aria-label="telegram"
+                    >TG</a
+                  >
+                </li>
+                <li class="socials-item">
+                  <a href="" class="link">IN</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section hero-section">
+        <div class="container hero-container">
+          <div class="section-text-content">
+            <h1 class="section-title">Altum Mare</h1>
+            <p class="section-text">
+              — майстерня дослідження глибин людського досвіду.
+            </p>
+            <p class="section-text">
+              В розділах майстерні ми поєднуємо інтуїцію сновидінь, символізм
+              мистецтва, мудрість тіла, космічну навігацію та силу знань, щоб
+              допомогти вам знайти гармонію між внутрішнім і зовнішнім світом.
+            </p>
+          </div>
+          <div class="hero-img-wrap">
+            <img
+              src="./images/img/cave.jpg"
+              alt="Печера у скелі із видом на море"
+              width="310"
+            />
+            <!-- <div class="img-description">
+              <p class="section-text-min">Altum Mare</p>
+              <p class="section-text-min">До розділів</p>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="section blog-list-section">
+        <div class="container blog-list-container">
+          <h2 class="section-title hidden">Блоги Майстерні</h2>
+          <ul class="blog-list list">
+            <li class="blog-item">
+              <div class="blog-card">
+                <div class="section-img-wrap">
+                  <img
+                    src="./images/img/dreams.jpg"
+                    alt="жінка в блакитній кімнаті, наповненій хмарами"
+                    width="310"
+                  />
+                </div>
+                <div class="img-description">
+                  <p class="section-text-min">Сновидіння</p>
+                  <p class="section-text-min">До розділу</p>
+                </div>
+              </div>
+            </li>
+            <li class="blog-item">
+              <div class="blog-card">
+                <div class="section-img-wrap">
+                  <img
+                    src="./images/img/art.jpg"
+                    alt="Студія з художніми матеріалами, ескізами та статуєю"
+                    width="310"
+                  />
+                </div>
+                <div class="img-description">
+                  <p class="section-text-min">Образи в мистецтві</p>
+                  <p class="section-text-min">До розділу</p>
+                </div>
+              </div>
+            </li>
+            <li class="blog-item">
+              <div class="blog-card">
+                <div class="section-img-wrap">
+                  <img
+                    src="./images/img/upside-down.jpg"
+                    alt="чоловік в морі, видно тільки його ноги в кросівках"
+                    width="310"
+                  />
+                </div>
+                <div class="img-description">
+                  <p class="section-text-min">Тіло як провідник</p>
+                  <p class="section-text-min">До розділу</p>
+                </div>
+              </div>
+            </li>
+            <li class="blog-item">
+              <div class="blog-card">
+                <div class="section-img-wrap">
+                  <img
+                    src="./images/img/moonkiss.jpg"
+                    alt="силует жінки, що тримає в руках місяць"
+                    width="310"
+                  />
+                </div>
+                <div class="img-description">
+                  <p class="section-text-min">Астро-Навігація</p>
+                  <p class="section-text-min">До розділу</p>
+                </div>
+              </div>
+            </li>
+            <li class="blog-item">
+              <div class="blog-card">
+                <div class="section-img-wrap">
+                  <img
+                    src="./images/img/reading.jpg"
+                    alt="друкарська машинка"
+                    width="310"
+                  />
+                  <div class="img-description">
+                    <p class="section-text-min">Читальня</p>
+                    <p class="section-text-min">До розділу</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo-wrap">
+          <a href="./index.html"
+            ><img
+              src="./images/logos/logo-footer.png"
+              alt="логотип компанії"
+              width="80"
+          /></a>
+        </div>
+        <p class="footer-text">&copy; Altum Mare 2025</p>
+        <p class="footer-text">
+          Developed with
+          <svg class="heart-icon" width="20" height="12">
+            <use href="./images/icons/icons.svg#icon-heart"></use>
+          </svg>
+          by Dari Shpak
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="./js/mob-menu.js"></script>
+    <script type="module" src="./js/scroll-to-top.js"></script>
+  </body>
+</html>
