@@ -93,15 +93,12 @@ img {
   margin-right: auto;
 }
 
-
-
-
 .section {
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
-.section-text-content{
+.section-text-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -114,20 +111,25 @@ img {
   letter-spacing: -1px;
 }
 
-.section-text{
+.section-text {
   font-size: 16px;
   font-weight: 200;
   line-height: 160%;
 }
 
-.section-text-min{
+.section-text-min {
   font-size: 15px;
 }
 
-.img-description{
+.img-description {
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
+  max-width: 310px;
+}
+
+.section-img-wrap img {
+  max-width: 326px;
 }
 
 /* ================= HEADER STYLES ================= */
@@ -237,5 +239,26 @@ img {
 @keyframes beat {
   to {
     transform: scale(1.6);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-img-wrap img {
+    min-width: 672px;
+  }
+
+  .img-description {
+    min-width: 672px;
   }
 }
