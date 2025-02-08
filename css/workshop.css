@@ -18,8 +18,18 @@
   gap: 32px;
 }
 
-.blog-item{
+.blog-item {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .blog-list {
+    gap: 64px;
+  }
+
+  .blog-item {
+    gap: 32px;
+  }
 }
