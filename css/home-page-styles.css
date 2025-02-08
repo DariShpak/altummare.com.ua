@@ -1,0 +1,14 @@
+.hero-section {
+  margin-top: 80px;
+}
+
+.hero-img-wrap {
+  margin-top: 16px;
+  max-width: 310px;
+}
+
+.blog-list{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
