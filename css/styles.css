@@ -330,7 +330,7 @@ img {
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1312px;
+    max-width: 1440px;
     padding-left: 64px;
     padding-right: 64px;
   }
@@ -338,5 +338,14 @@ img {
   .section {
     padding-top: 64px;
     padding-bottom: 64px;
+  }
+
+  .section-img-wrap img {
+    min-width: 504px;
+    object-fit:cover;
+  }
+
+  .img-description {
+    min-width: 504px;
   }
 }
