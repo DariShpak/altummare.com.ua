@@ -188,7 +188,7 @@ img {
   height: 100%;
   padding: 20px;
   display: none;
-  z-index: 999;
+  z-index: 1;
 }
 
 .mob-menu-list {
@@ -260,5 +260,16 @@ img {
 
   .img-description {
     min-width: 672px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo-wrap{
+    margin-left: 0;
+    margin-right: 0;
   }
 }
