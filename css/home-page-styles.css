@@ -21,7 +21,7 @@
   .hero-section {
     padding-bottom: 64px;
   }
-  
+
   .hero-img-wrap img {
     min-width: 672px;
   }
@@ -29,6 +29,8 @@
   .blog-list {
     gap: 64px;
   }
+
+
 
   .blog-card {
     max-width: 672px;
