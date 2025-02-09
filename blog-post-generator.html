@@ -17,11 +17,126 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/post-generator.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="container header-container">
+        <nav class="header-nav">
+          <ul class="header-nav-list list">
+            <li class="header-nav-item">
+              <a href="./index.html" class="link more-btn btn-link">Головна</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="./services.html" class="link more-btn btn-link"
+                >Послуги</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-logo-wrap">
+          <a href="./index.html" class="link">
+            <img
+              src="./images/logos/logo-header.png"
+              alt="логотип копанії"
+              width="180"
+              loading="lazy"
+          /></a>
+        </div>
+        <nav class="header-nav-list list">
+          <li class="header-nav-item">Контакти</li>
+          <li class="header-nav-item">
+            <ul class="socials list">
+              <li class="socials-item">
+                <a
+                  href="https://t.me/snovydinnyapro"
+                  class="link more-btn btn-link"
+                  target="_blank"
+                  rel="no-opener no-referrer no-follow noopener norefferrer nofollow"
+                  aria-label="telegram"
+                  >TG</a
+                >
+              </li>
+              <li class="socials-item">
+                <a href="" class="link more-btn btn-link">IN</a>
+              </li>
+            </ul>
+          </li>
+        </nav>
+        <!-- MOB-MENU -->
+        <button class="mob-menu-btn" type="button" aria-label="Відкрити меню">
+          <svg class="mob-menu-icon" id="menu-icon" width="35" height="35">
+            <use
+              href="./images/icons/icons.svg#icon-burger"
+              class="icon-burger"
+              id="icon-burger"
+            ></use>
+            <use
+              href="./images/icons/icons.svg#icon-close"
+              class="icon-close hidden"
+              id="icon-close"
+            ></use>
+          </svg>
+        </button>
+
+        <nav class="mob-menu" id="mob-menu">
+          <ul class="mob-menu-list">
+            <li class="mob-menu-list-item">
+              <a href="./index.html" class="mob-menu-link link">Головна</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./dreams-blog.html" class="mob-menu-link link"
+                >Сновидіння</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./art-blog.html" class="mob-menu-link link"
+                >Образи в мистецтві</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./body-blog.html" class="mob-menu-link link"
+                >Тіло як провідник</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./astro-blog.html" class="mob-menu-link link"
+                >Астро-Навігація</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./reading-blog.html" class="mob-menu-link link"
+                >Читальня</a
+              >
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./services.html" class="mob-menu-link link">Послуги</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="./contacts.html" class="mob-menu-link link">Контакти</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <ul class="socials list">
+                <li class="socials-item">
+                  <a
+                    href="https://t.me/snovydinnyapro"
+                    class="link"
+                    target="_blank"
+                    rel="no-opener no-referrer no-follow noopener norefferrer nofollow"
+                    aria-label="telegram"
+                    >TG</a
+                  >
+                </li>
+                <li class="socials-item">
+                  <a href="" class="link">IN</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <section class="section form-section">
         <div class="container form-container">
@@ -71,6 +186,27 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo-wrap">
+          <a href="./index.html"
+            ><img
+              src="./images/logos/logo-footer.png"
+              alt="логотип компанії"
+              width="80"
+              loading="lazy"
+          /></a>
+        </div>
+        <p class="footer-text">&copy; Altum Mare 2025</p>
+        <p class="footer-text">
+          Developed with
+          <svg class="heart-icon" width="20" height="12">
+            <use href="./images/icons/icons.svg#icon-heart"></use>
+          </svg>
+          by Dari Shpak
+        </p>
+      </div>
+    </footer>
     <script type="module" src="./js/post-creator.js"></script>
   </body>
 </html>
