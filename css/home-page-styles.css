@@ -43,7 +43,7 @@
   }
 
   .hero-section {
-    min-width: 474px;
+    width: 474px;
   }
 
   .hero-container .section-text-content {
@@ -121,7 +121,7 @@
   }
 
   .hero-section {
-    min-width: 583px;
+    width: 583px;
   }
 
   .blog-list {
