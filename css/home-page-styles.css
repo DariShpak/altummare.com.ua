@@ -114,9 +114,10 @@
 @media screen and (min-width: 1440px) {
   .main {
     width: calc(370vw + 5vw);
+
   }
 
-   .blog-list .blog-item:last-child {
+  .blog-list .blog-item:last-child {
     margin-right: 20vw; /* Додаємо простір після останнього елемента */
   }
 
