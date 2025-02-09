@@ -76,13 +76,12 @@
   }
 
   .blog-list .blog-item:last-child {
-    margin-right: 10vw; /* Додаємо простір після останнього елемента */
+    margin-right: 10vw;
   }
 
   .horizontal {
     display: block;
     width: 100vw;
-    /* height: calc(99vh + 1px); */
     height: 100%;
   }
 
@@ -118,7 +117,7 @@
   }
 
   .blog-list .blog-item:last-child {
-    margin-right: 20vw; /* Додаємо простір після останнього елемента */
+    margin-right: 20vw; 
   }
 
   .hero-section {

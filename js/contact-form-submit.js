@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("contactModal")
 
   if (!form || !successMessage || !modal) {
-    console.error("❌ Помилка: Форма, повідомлення або модалка не знайдені!")
     return
   }
 
@@ -21,9 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
 
       if (response.ok) {
-        console.log("✅ Відправлено! Ховаємо форму...")
-
-        // 🔥 Форма зникає, повідомлення стає на її місце
         form.style.display = "none"
         successMessage.style.display = "block"
 
@@ -35,13 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("❌ Помилка! Спробуйте ще раз.")
       }
     } catch (error) {
-      console.error("❌ Виникла помилка:", error)
       alert("❌ Щось пішло не так. Перевірте інтернет-з'єднання.")
     }
   })
 
   function resetForm() {
-    form.style.display = "flex" // Повертаємо форму назад
+    form.style.display = "flex"
     successMessage.style.display = "none"
     form.reset()
   }

@@ -3,9 +3,8 @@ let horizontal = document.querySelector(".horizontal")
 
 function updateScrollBehavior() {
   if (window.innerWidth >= 1024) {
-    let totalWidth = main.scrollWidth // Визначаємо правильну ширину
-    horizontal.style.height = `${totalWidth - window.innerWidth}px` // Фіксуємо прокрутку без лишнього простору
-    document.body.style.overflowY = "scroll"
+    let totalWidth = main.scrollWidth 
+    horizontal.style.height = `${totalWidth - window.innerWidth}px`
     window.addEventListener("scroll", scrollFunction)
   } else {
     main.style.transform = ""
@@ -19,7 +18,6 @@ function scrollFunction() {
   main.style.transform = `translateX(-${scrollY}px)`
 }
 
-// Виконуємо при завантаженні та зміні розміру екрану
 updateScrollBehavior()
 window.addEventListener("resize", updateScrollBehavior)
 

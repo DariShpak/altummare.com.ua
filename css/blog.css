@@ -40,7 +40,7 @@
   border-left: 3px solid#a3c5ba;
   background: #f9f9f9;
   box-sizing: border-box;
-  display: none; /* Початково приховане */
+  display: none; 
 }
 
 @media (min-width: 1024px) {

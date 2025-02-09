@@ -7,12 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "reading-blog": 5
   }
 
-  // Визначаємо категорію на основі data-атрибута
   const bodyElement = document.body
   const pageCategory = bodyElement.getAttribute("data-category")
 
   if (!pageCategory || !categoryMapping[pageCategory]) {
-    console.error("❌ Категорія не знайдена або не визначена!")
     return
   }
 
@@ -26,31 +24,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const posts = await response.json()
       displayPosts(posts)
-    } catch (error) {
-      console.error("❌ Помилка при отриманні постів:", error)
-    }
+    } catch (error) {}
   }
 
   function displayPosts(posts) {
     const postsContainer = document.getElementById("postsContainer")
     if (!postsContainer) {
-      console.error("❌ Помилка: елемент #postsContainer не знайдено!")
       return
     }
 
-    const fragment = document.createDocumentFragment() // Використовуємо фрагмент для оптимізації
+    const fragment = document.createDocumentFragment()
 
     posts.forEach((post) => {
       const postElement = document.createElement("article")
       postElement.classList.add("article")
 
-      // Заголовок поста (видимий)
       const titleElement = document.createElement("h3")
       titleElement.classList.add("article-title")
       titleElement.textContent = post.Title || "Без заголовка"
-      titleElement.style.cursor = "pointer" // Робимо курсор у вигляді "руки"
+      titleElement.style.cursor = "pointer"
 
-      // Додаємо SVG-іконку
       const svgElement = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "svg"
@@ -68,19 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
       svgElement.appendChild(useElement)
       titleElement.appendChild(svgElement)
 
-      // Контейнер для тексту (прихований)
       const articleContent = document.createElement("div")
       articleContent.classList.add("article-content")
-      articleContent.style.display = "none" // Ховаємо текст спочатку
+      articleContent.style.display = "none"
 
-      // Текст статті
       const descriptionElement = document.createElement("p")
       descriptionElement.classList.add("section-text")
       descriptionElement.textContent = post.Description || "Опис відсутній."
 
       articleContent.appendChild(descriptionElement)
 
-      // Додаємо посилання, якщо є
       if (post.Links) {
         try {
           const linksArray = JSON.parse(post.Links)
@@ -102,29 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             articleContent.appendChild(linksContainer)
           }
-        } catch (e) {
-          console.error("❌ Помилка обробки посилань:", e)
-        }
+        } catch (e) {}
       }
 
-      // Додаємо подію кліку на заголовок
       titleElement.addEventListener("click", () => {
         const isHidden = articleContent.style.display === "none"
         articleContent.style.display = isHidden ? "block" : "none"
         svgElement.style.transform = isHidden
           ? "rotate(180deg)"
-          : "rotate(0deg)" // Повертаємо іконку
+          : "rotate(0deg)"
       })
 
       postElement.appendChild(titleElement)
       postElement.appendChild(articleContent)
-      fragment.prepend(postElement) // Додаємо у фрагмент (це швидше за appendChild/prepend)
+      fragment.prepend(postElement)
     })
 
-    postsContainer.innerHTML = "" // Чистимо контейнер перед додаванням нових постів
-    postsContainer.appendChild(fragment) // Додаємо всі нові статті одразу
+    postsContainer.innerHTML = ""
+    postsContainer.appendChild(fragment)
   }
 
-  // Викликаємо функцію для отримання постів за категорією
   fetchPostsByCategory()
 })
