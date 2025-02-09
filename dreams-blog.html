@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/blog.css" />
   </head>
-  <body>
+  <body data-category="dreams-blog">
     <button id="scroll-to-top" class="scroll-to-top-btn home-page-scroll-btn">
       <svg class="scroll-up-icon" width="30" height="30">
         <use href="./images/icons/icons.svg#icon-up"></use>
@@ -136,127 +136,30 @@
       </div>
     </header>
     <main>
-      <section class="section services-section" id="services-section">
-        <div class="container services-container">
-          <h2 class="section-title visually-hidden">Наші послуги</h2>
-
-          <ul class="services-list list">
-            <li class="services-list-item">
-              <div class="section-text-content">
-                <h2 class="section-subtitle">
-                  Сеанс Декодування Вашого Сновидіння
-                </h2>
-                <p class="section-text">індивідуально</p>
-                <p class="section-text">
-                  Прочитання коду образів, символів. Зв’язок Несвідомого
-                  з реальністю. Ми доторкнемося до суті, усвідомимо повідомлення
-                  та енергію. Інтегруємо бажання та потреби, які прагнуть
-                  реалізуватися.
-                </p>
-                <button class="button">Замовити послугу</button>
-              </div>
-              <div class="section-img-wrap">
-                <img
-                  src="./images/img/serv-1.jpg"
-                  alt="природний вир"
-                  width="310"
-                  loading="lazy"
-                />
-              </div>
-            </li>
-
-            <li class="services-list-item">
-              <div class="section-text-content">
-                <h2 class="section-subtitle">СноВидіння.Про</h2>
-                <p class="section-text">групова робота</p>
-                <p class="section-text">
-                  Це простір для практики, де кожний вчиться як відчувати та
-                  розуміти образи, символи, сюжети сновидінь. Груповий формат.
-                  На кожній зустрічі ми слухаємо сон одного з учасників та всією
-                  групою розкодовуємо його наче свій. Це спосіб побачити
-                  багатовимірність одного сну. Динаміка групи посилює реалізацію
-                  в житті.
-                </p>
-                <button class="button">Замовити послугу</button>
-              </div>
-              <div class="section-img-wrap">
-                <img
-                  src="./images/img/serv-2.jpg"
-                  alt="жінка спить в блакитній кімнаті з хмарами"
-                  width="310"
-                  loading="lazy"
-                />
-              </div>
-            </li>
-
-            <li class="services-list-item">
-              <div class="section-text-content">
-                <h2 class="section-subtitle">Кіно - Терапія</h2>
-                <p class="section-text">групова робота</p>
-                <p class="section-text">
-                  Запрошуємо зазирнути у свій внутрішній світ через кіно та
-                  обговорити це в затишній атмосфері довіри, дізнатися про інші
-                  погляди та розширити своє сприйняття реальності. Це дивовижний
-                  інструмент, який запускає контакт між почуттями та аналізом.
-                  Мета - відчуття цілісності та задоволення.
-                </p>
-                <button class="button">Замовити послугу</button>
-              </div>
-              <div class="section-img-wrap">
-                <img
-                  src="./images/img/serv-3.jpg"
-                  alt="людина в кінотеатрі "
-                  width="310"
-                  loading="lazy"
-                />
-              </div>
-            </li>
-
-            <li class="services-list-item">
-              <div class="section-text-content">
-                <h2 class="section-subtitle">Сеанс «Занурення в Тіло»</h2>
-                <p class="section-text">індивідуально</p>
-                <p class="section-text">
-                  Ваше тіло – це храм мудрості, який зберігає всі відповіді на
-                  ваші запитання. Техніки декодування тілесних сигналів для
-                  прийняття мудрих рішень, відпускання напруги, проживання
-                  емоцій, розуміння життєвих ситуацій. Розпакування емоційних
-                  блоків, трансгенераційних програм.
-                </p>
-                <button class="button">Замовити послугу</button>
-              </div>
-              <div class="section-img-wrap">
-                <img
-                  src="./images/img/serv-4.jpg"
-                  alt="жінка зі спини з піднятими руками"
-                  width="310"
-                  loading="lazy"
-                />
-              </div>
-            </li>
-
-            <li class="services-list-item">
-              <div class="section-text-content">
-                <h2 class="section-subtitle">Консультація Астро-навігація</h2>
-                <p class="section-text">індивідуально</p>
-                <p class="section-text">
-                  Кожного року в день нашого Дня Народження запускається нова
-                  енергетична програма. Прочитання Соляру (прогноз на рік)
-                  допомагає навести радари, відкалібрувати внутрішній компас та
-                  звіритися із зоряною погодою.
-                </p>
-                <button class="button">Замовити послугу</button>
-              </div>
-              <div class="section-img-wrap">
-                <img
-                  src="./images/img/serv-5.jpg"
-                  alt="місяць в жіночих руках"
-                  width="310"
-                  loading="lazy"
-                />
-              </div>
-            </li>
-          </ul>
+      <section class="section blog-hero-section">
+        <div class="container blog-hero-container">
+          <div class="section-text-content">
+            <h1 class="section-title">Сновидіння</h1>
+            <p class="section-text">
+              Зазирніть у загадковий світ сновидінь, де приховані відповіді на
+              запитання, які ми не завжди усвідомлюємо. Тут ми досліджуємо, як
+              сни формують наші емоції, рішення та внутрішній світ, допомагаючи
+              побачити нові перспективи життя.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section articles-section">
+        <div class="container articles-container">
+          <div class="section-img-wrap">
+            <img
+              src="./images/img/blog-dreams.jpg"
+              alt="жінка на фоні блакитного неба, її голова занурена в білу хмарку "
+              width="310"
+              loading="lazy"
+            />
+          </div>
+          <div id="postsContainer" class="articles-wrap"></div>
         </div>
       </section>
     </main>
@@ -283,5 +186,6 @@
     </footer>
     <script type="module" src="./js/mob-menu.js"></script>
     <script type="module" src="./js/scroll-to-top.js"></script>
+    <script type="module" src="./js/fetch-post-by-category.js"></script>
   </body>
 </html>
