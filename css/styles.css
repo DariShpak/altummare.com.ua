@@ -281,6 +281,10 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.mob-menu-list-item {
+  display: flex;
+  justify-content: center;
+}
 
 .mob-menu-list-item .socials {
   display: flex;
