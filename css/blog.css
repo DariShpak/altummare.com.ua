@@ -1,0 +1,9 @@
+.blog-hero-section {
+  margin-top: 80px;
+}
+
+@media (min-width: 1024px) {
+  .section-text-content {
+    max-width: 452px;
+  }
+}
