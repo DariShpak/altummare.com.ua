@@ -1,0 +1,76 @@
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altum Mare - Блог-пост-генератор</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/post-generator.css" />
+  </head>
+  <body>
+    <main>
+      <section class="section form-section">
+        <div class="container form-container">
+          <h2 class="section-subtitle">Додати новий пост</h2>
+
+          <form id="postForm" class="form-generator">
+            <label for="category" class="title">Обрати розділ:</label>
+
+            <select id="category" name="category">
+              <option value="dreams-blog">Сновидіння</option>
+              <option value="art-blog">Образи в мистецтві</option>
+              <option value="body-blog" selected>Тіло як провідник</option>
+              <option value="astro-blog">Астро-Навігація</option>
+              <option value="reading-blog">Читальня</option>
+            </select>
+
+            <label for="title" class="title">Назва:</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              class="form-input"
+            />
+
+            <label for="description" class="title">Текст посту:</label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              class="form-input"
+            ></textarea>
+
+            <label for="links" class="title">Посилання (через кому):</label>
+            <input
+              type="text"
+              id="links"
+              name="links"
+              placeholder="https://example.com, https://youtube.com/video"
+              class="form-input"
+            />
+
+            <button type="submit">Відправити</button>
+          </form>
+
+          <p id="responseMessage"></p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./js/post-creator.js"></script>
+  </body>
+</html>
