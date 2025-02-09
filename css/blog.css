@@ -5,7 +5,7 @@
 .article {
   border-bottom: 1px solid #ddd;
   padding: 10px;
-  max-width: 800px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -19,7 +19,7 @@
 
   cursor: pointer;
   display: flex;
-  /* gap: 16px; */
+  gap: 16px;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -30,7 +30,7 @@
 }
 
 .article-content {
-  max-width: 800px;
+  max-width: 600px;
   margin: 10px 0;
   padding: 10px;
   border-left: 3px solid#a3c5ba;
@@ -40,14 +40,16 @@
 }
 
 @media (min-width: 1024px) {
-  .section-text-content {
-    max-width: 452px;
+  .articles-container {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
   }
 
   .blog-page-container .section-img-wrap {
     flex: 1;
     position: sticky;
-    top: 50px;
+    top: 80px;
     height: fit-content;
     margin-bottom: 0;
   }
