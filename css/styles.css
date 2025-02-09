@@ -197,7 +197,7 @@ img {
   padding: 10px 10px;
   transition: background box-shadow 280ms ease;
 
-  max-width: 180px;
+  max-width: 160px;
 
   margin-top: 32px;
 }
@@ -363,6 +363,10 @@ img {
   cursor: pointer;
   padding: 0;
   z-index: 10; /* Щоб було поверх усього */
+}
+
+.close:hover .mob-menu-icon {
+  transform: scale(1.1);
 }
 
 label {
