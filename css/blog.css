@@ -40,6 +40,9 @@
 }
 
 @media (min-width: 1024px) {
+  .section-text-content {
+    max-width: 452px;
+  }
   .articles-container {
     display: flex;
     gap: 48px;
