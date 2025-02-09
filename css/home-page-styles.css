@@ -34,7 +34,7 @@
   .main {
     display: flex;
     flex-direction: row;
-    width: calc(360vw + 5vw);
+    width: calc(390vw + 5vw);
     height: 100vh;
     position: fixed;
     top: 0;
