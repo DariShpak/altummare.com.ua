@@ -16,16 +16,20 @@
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 200;
-
   cursor: pointer;
   display: flex;
   gap: 16px;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
+  padding-left: 8px;
+  padding-right: 16px;
 }
 
 .button-decor-icon {
+  position: absolute;
+  right: 16px;
   transition: transform 0.3s ease;
 }
 
@@ -77,5 +81,9 @@
 
   .article-content {
     width: 640px;
+  }
+
+  .button-decor-icon {
+    right: 64px;
   }
 }
