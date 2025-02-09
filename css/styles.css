@@ -341,7 +341,6 @@ img {
   position: relative; /* Додаємо, щоб хрестик міг позиціонуватися відносно форми */
   padding: 40px;
   width: 90%;
-  height: 100%;
   max-width: 500px;
   text-align: center;
 }
@@ -350,10 +349,10 @@ img {
 .contact-form {
   width: 90%;
   max-width: 500px;
-  height: 100%;
+
   margin: 0 auto;
   text-align: left;
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   gap: 16px;
 }
@@ -424,7 +423,9 @@ textarea {
   display: none;
 }
 
+/* Повідомлення про успіх */
 #successMessage {
+  display: none;
   text-align: center;
   font-size: 18px;
   color: #1a403f;
