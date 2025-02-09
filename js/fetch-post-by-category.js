@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return
     }
 
-    postsContainer.innerHTML = "" // Очищуємо контейнер
+    const fragment = document.createDocumentFragment() // Використовуємо фрагмент для оптимізації
 
     posts.forEach((post) => {
       const postElement = document.createElement("article")
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       titleElement.textContent = post.Title || "Без заголовка"
       titleElement.style.cursor = "pointer" // Робимо курсор у вигляді "руки"
 
-      // Додаємо SVG-іконку (не обов’язково, можна прибрати)
+      // Додаємо SVG-іконку
       const svgElement = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "svg"
@@ -118,8 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       postElement.appendChild(titleElement)
       postElement.appendChild(articleContent)
-      postsContainer.appendChild(postElement)
+      fragment.prepend(postElement) // Додаємо у фрагмент (це швидше за appendChild/prepend)
     })
+
+    postsContainer.innerHTML = "" // Чистимо контейнер перед додаванням нових постів
+    postsContainer.appendChild(fragment) // Додаємо всі нові статті одразу
   }
 
   // Викликаємо функцію для отримання постів за категорією
