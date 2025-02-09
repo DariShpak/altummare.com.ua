@@ -196,6 +196,58 @@
         </p>
       </div>
     </footer>
+    <!-- Модальне вікно -->
+    <div id="contactModal" class="modal hidden">
+      <div class="form-container">
+        <form action="https://formspree.io/f/meoezndk"  method="POST" class="contact-form" id="contact-form">
+          <h1 class="section-title">Давайте поговоримо</h1>
+          <button class="close" type="button" aria-label="Закрити меню">
+            <svg
+              class="mob-menu-icon close"
+              id="menu-icon"
+              width="35"
+              height="35"
+            >
+              <use
+                href="./images/icons/icons.svg#icon-close"
+                class="icon-close"
+                id="icon-close"
+              ></use>
+            </svg>
+          </button>
+
+          <p class="section-text">
+            Маєте запит, ідеї або питання? Напишіть, і ми разом створимо
+            комфортний простір для спілкування та змін.
+          </p>
+
+          <label for="name">Ім’я</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="contact">Контактна інформація</label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            placeholder="Email або Telegram"
+            required
+          />
+
+          <label for="message">Ваш запит</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="submit-btn">Надіслати</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+          <h3>Дякуємо!</h3>
+          <p>Ми отримали ваш запит і зв’яжемося з вами найближчим часом.</p>
+          <a href="index.html" class="back-link">Повернутися на головну</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/contact-form-submit.js"></script>
     <script type="module" src="./js/mob-menu.js"></script>
     <script type="module" src="./js/scroll-to-top.js"></script>
     <script type="module" src="./js/fetch-post-by-category.js"></script>
