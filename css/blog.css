@@ -2,8 +2,57 @@
   margin-top: 80px;
 }
 
+.article {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-title {
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 200;
+
+  cursor: pointer;
+  display: flex;
+  /* gap: 16px; */
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.button-decor-icon {
+  transition: transform 0.3s ease;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 3px solid#a3c5ba;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  display: none; /* Початково приховане */
+}
+
 @media (min-width: 1024px) {
   .section-text-content {
     max-width: 452px;
+  }
+
+  .blog-page-container .section-img-wrap {
+    flex: 1;
+    position: sticky;
+    top: 50px;
+    height: fit-content;
+    margin-bottom: 0;
+  }
+
+  .links-container {
+    margin-top: 10px;
   }
 }
