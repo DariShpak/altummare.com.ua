@@ -140,6 +140,71 @@ img {
   max-width: 326px;
 }
 
+.more-btn,
+.open-modal-btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  max-width: 180px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.btn-link {
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 12px;
+  color: var(--dark-color);
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--dark-color);
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.btn-link:hover::after {
+  width: 100%;
+}
+
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  padding: 10px 10px;
+  transition: background box-shadow 280ms ease;
+
+  width: 100px;
+
+  margin-top: 32px;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: inset -8px -7px 10px #fff, inset 8px 7px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* ================= HEADER STYLES ================= */
 .header {
   position: fixed;
@@ -202,8 +267,6 @@ img {
 .mob-menu-list {
   max-width: 180px;
   list-style: none;
-
-  padding: 0;
 
   display: flex;
 
@@ -350,7 +413,7 @@ img {
 
   .section-img-wrap img {
     min-width: 504px;
-    object-fit:cover;
+    object-fit: cover;
   }
 
   .img-description {
