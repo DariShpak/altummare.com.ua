@@ -43,7 +43,7 @@
   }
 
   .hero-section {
-    width: 474px;
+    min-width: 474px;
   }
 
   .hero-container .section-text-content {
@@ -73,6 +73,10 @@
     padding-left: 64px;
     padding-right: 64px;
     align-items: center;
+  }
+
+  .blog-list .blog-item:last-child {
+    margin-right: 10vw; /* Додаємо простір після останнього елемента */
   }
 
   .horizontal {
@@ -107,20 +111,17 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .main {
-    width: 100vw; /* Автоматично підлаштовується під ширину */
-    max-width: 1440px; /* Але не більше 1440px */
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .main {
-    width: calc(360vw + 5vw);
+    width: calc(370vw + 5vw);
+  }
+
+   .blog-list .blog-item:last-child {
+    margin-right: 20vw; /* Додаємо простір після останнього елемента */
   }
 
   .hero-section {
-    width: 583px;
+    min-width: 583px;
   }
 
   .blog-list {
