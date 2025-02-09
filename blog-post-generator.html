@@ -20,16 +20,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/post-generator.css" />
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const accessKey = urlParams.get("key");
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search)
+        const accessKey = urlParams.get("key")
 
-    if (accessKey !== "mySecretKey123123123") {
-      alert("⛔ Доступ заборонено!");
-      window.location.href = "index.html"; // Перенаправлення на головну
-    }
-  });
-</script>
+        if (accessKey !== "mySecretKey123123123") {
+          alert("⛔ Доступ заборонено!")
+          window.location.href = "index.html" // Перенаправлення на головну
+        }
+      })
+    </script>
   </head>
   <body>
     <header class="header">
@@ -218,6 +218,7 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="./js/mob-menu.js"></script>
     <script type="module" src="./js/post-creator.js"></script>
   </body>
 </html>
