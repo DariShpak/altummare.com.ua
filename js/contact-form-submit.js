@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const successMessage = document.getElementById("successMessage")
   const modal = document.getElementById("contactModal")
 
-  if (!form) {
-    console.error("❌ Помилка: Форма не знайдена!")
+  if (!form || !successMessage || !modal) {
+    console.error("❌ Помилка: Форма, повідомлення або модалка не знайдені!")
     return
   }
 
@@ -21,11 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
       })
 
       if (response.ok) {
-        // 😏 Ось він – секс: красиво ховаємо форму, показуємо повідомлення
+        console.log("✅ Відправлено! Ховаємо форму...")
+
+        // 🔥 Форма зникає, повідомлення стає на її місце
         form.style.display = "none"
         successMessage.style.display = "block"
 
-        // Закриваємо модалку через 3 секунди, бо діла зроблені 😎
         setTimeout(() => {
           modal.style.display = "none"
           resetForm()
@@ -39,15 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-  // Функція скидання форми, щоб усе виглядало як свіженьке після закриття
   function resetForm() {
-    form.style.display = "block"
+    form.style.display = "flex" // Повертаємо форму назад
     successMessage.style.display = "none"
     form.reset()
-
-    // Примусове оновлення стилів, щоб відступи не схлопувались
-    form.classList.remove("reset")
-    void form.offsetWidth
-    form.classList.add("reset")
   }
 })
