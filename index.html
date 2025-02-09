@@ -124,9 +124,7 @@
               <a href="./services.html" class="mob-menu-link link">Послуги</a>
             </li>
             <li class="mob-menu-list-item">
-              <a href="./contacts.html" class="mob-menu-link link openModalBtn"
-                >Контакти</a
-              >
+              <button class="openModalBtn">Звʼязатися</button>
             </li>
             <li class="mob-menu-list-item">
               <ul class="socials list">
@@ -339,7 +337,7 @@
     <!-- Модальне вікно -->
     <div id="contactModal" class="modal hidden">
       <div class="form-container">
-        <form action="" class="contact-form" id="contact-form">
+        <form action="https://formspree.io/f/meoezndk"  method="POST" class="contact-form" id="contact-form">
           <h1 class="section-title">Давайте поговоримо</h1>
           <button class="close" type="button" aria-label="Закрити меню">
             <svg
@@ -386,7 +384,8 @@
         </div>
       </div>
     </div>
-    <script type="module" src="./js/contact-form.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/contact-form-submit.js"></script>
     <script type="module" src="./js/mob-menu.js"></script>
     <script type="module" src="./js/scroll-to-top.js"></script>
     <script type="module" src="./js/horizontal-scroll.js"></script>
