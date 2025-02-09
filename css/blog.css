@@ -49,6 +49,14 @@
     justify-content: space-between;
   }
 
+  .article-title {
+    width: 540px;
+  }
+
+  .article-content {
+    width: 540px;
+  }
+
   .articles-container .section-img-wrap {
     flex: 1;
     position: sticky;
