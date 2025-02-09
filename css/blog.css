@@ -69,3 +69,13 @@
     margin-top: 10px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .article-title {
+    width: 640px;
+  }
+
+  .article-content {
+    width: 640px;
+  }
+}
