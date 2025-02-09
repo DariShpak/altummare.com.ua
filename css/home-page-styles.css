@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: row;
     width: calc(430vw + 5vw);
-    max-width: 1440px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -105,6 +104,13 @@
     left: 0;
     width: 100%;
     z-index: 20;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main {
+    width: 100vw; /* Автоматично підлаштовується під ширину */
+    max-width: 1440px; /* Але не більше 1440px */
   }
 }
 
