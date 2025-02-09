@@ -1,3 +1,7 @@
+.form-section{
+  margin-top: 40px;
+}
+
 .form-generator {
   display: flex;
   flex-direction: column;
