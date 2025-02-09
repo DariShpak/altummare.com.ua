@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
   openModalBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       modal.style.display = "flex"
+
+      // Примусове оновлення стилів, щоб відступи не схлопувались
+      setTimeout(() => {
+        form.classList.remove("reset")
+        void form.offsetWidth // Хитрий трюк для перезапуску стилів
+        form.classList.add("reset")
+      }, 10)
     })
   })
 
@@ -54,5 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
     form.style.display = "block"
     successMessage.style.display = "none"
     form.reset()
+
+    // Оновлення стилів після повторного відкриття
+    form.classList.remove("reset")
+    void form.offsetWidth // Перезапуск рендеру
+    form.classList.add("reset")
   }
 })
