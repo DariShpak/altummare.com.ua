@@ -1,10 +1,13 @@
+
+
 let main = document.querySelector(".main")
 let horizontal = document.querySelector(".horizontal")
 
 function updateScrollBehavior() {
   if (window.innerWidth >= 1024) {
-    let totalWidth = main.scrollWidth
-    horizontal.style.height = `${totalWidth - window.innerWidth}px`
+    let totalWidth = main.scrollWidth 
+    horizontal.style.height = `${totalWidth - window.innerWidth}px` 
+    document.body.style.overflowY = "scroll"
     window.addEventListener("scroll", scrollFunction)
   } else {
     main.style.transform = ""
@@ -31,5 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 })
-
-
