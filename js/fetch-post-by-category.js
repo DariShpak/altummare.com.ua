@@ -67,8 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const descriptionElement = document.createElement("p")
       descriptionElement.classList.add("section-text")
-      descriptionElement.textContent = post.Description || "Опис відсутній."
+      // descriptionElement.textContent = post.Description || "Опис відсутній."
 
+      descriptionElement.innerHTML = (
+        post.Description || "Опис відсутній."
+      ).replace(/\n/g, "<br>")
       articleContent.appendChild(descriptionElement)
 
       if (post.Links) {
