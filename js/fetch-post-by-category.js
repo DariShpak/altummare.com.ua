@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const categoryId = categoryMapping[pageCategory]
+  let currentlyOpenPost = null // Для зберігання відкритого поста
 
   async function fetchPostsByCategory() {
     try {
@@ -24,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const posts = await response.json()
       displayPosts(posts)
-    } catch (error) {}
+    } catch (error) {
+      console.error("Помилка завантаження постів:", error)
+    }
   }
 
   function displayPosts(posts) {
@@ -38,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     posts.forEach((post) => {
       const postElement = document.createElement("article")
       postElement.classList.add("article")
+
+      postElement.setAttribute("data-id", post.ID) // Додаємо ID поста
 
       const titleElement = document.createElement("h3")
       titleElement.classList.add("article-title")
@@ -67,11 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const descriptionElement = document.createElement("p")
       descriptionElement.classList.add("section-text")
-      // descriptionElement.textContent = post.Description || "Опис відсутній."
-
       descriptionElement.innerHTML = (
         post.Description || "Опис відсутній."
       ).replace(/\n/g, "<br>")
+
       articleContent.appendChild(descriptionElement)
 
       if (post.Links) {
@@ -95,15 +99,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
             articleContent.appendChild(linksContainer)
           }
-        } catch (e) {}
+        } catch (e) {
+          console.error("Помилка обробки посилань:", e)
+        }
       }
 
       titleElement.addEventListener("click", () => {
         const isHidden = articleContent.style.display === "none"
+
+        // Закриваємо попередній відкритий пост, якщо є
+        if (currentlyOpenPost && currentlyOpenPost !== articleContent) {
+          currentlyOpenPost.style.display = "none"
+          currentlyOpenPost.previousElementSibling.querySelector(
+            ".button-decor-icon"
+          ).style.transform = "rotate(0deg)"
+        }
+
+        // Відкриваємо або закриваємо поточний пост
         articleContent.style.display = isHidden ? "block" : "none"
         svgElement.style.transform = isHidden
           ? "rotate(180deg)"
           : "rotate(0deg)"
+
+        // Оновлюємо змінну для відстеження відкритого поста
+        currentlyOpenPost = isHidden ? articleContent : null
       })
 
       postElement.appendChild(titleElement)
