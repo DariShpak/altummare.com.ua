@@ -3,7 +3,7 @@ let horizontal = document.querySelector(".horizontal")
 
 function updateScrollBehavior() {
   if (window.innerWidth >= 1024) {
-    let totalWidth = main.scrollWidth 
+    let totalWidth = main.scrollWidth
     horizontal.style.height = `${totalWidth - window.innerWidth}px`
     window.addEventListener("scroll", scrollFunction)
   } else {
@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 })
+
+
