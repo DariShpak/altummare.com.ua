@@ -16,6 +16,13 @@
   display: none;
 }
 
+.img-description {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  max-width: 310px;
+}
+
 @media screen and (min-width: 768px) {
   .blog-list {
     gap: 64px;
@@ -23,6 +30,11 @@
 
   .blog-card {
     max-width: 672px;
+  }
+
+
+  .img-description {
+    min-width: 672px;
   }
 }
 
@@ -61,6 +73,10 @@
     height: auto;
   }
 
+  .img-description {
+    min-width: 358px;
+  }
+
   .blog-list {
     flex-direction: row;
     row-gap: 82px;
@@ -97,8 +113,8 @@
 
   .section img {
     max-height: 69vh;
-    max-width: 360px;
-    object-fit: contain;
+    max-width: 358px;
+    object-fit: cover;
   }
 
   .footer {
@@ -132,8 +148,8 @@
     width: 504px;
   }
 
-  .blog-card .img-description {
-    max-width: 504px;
+  .img-description {
+    min-width: 504px;
   }
 
   .blog-item {
