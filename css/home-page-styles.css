@@ -28,17 +28,18 @@
 }
 
 .blog-card .section-img-wrap {
-  min-width: 310px;
+  min-width: 326px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   object-fit: cover;
+  text-align: start;
 }
 
 .blog-card .img-description {
-  width: 95%;
+  width: 100%;
 }
 
 .horizontal {
@@ -54,10 +55,9 @@
     max-width: 672px;
   }
 
-  
-.blog-card .section-img-wrap {
-  min-width: 672px;
-}
+  .blog-card .section-img-wrap {
+    min-width: 672px;
+  }
 
   .img-description {
     min-width: 672px;
@@ -69,10 +69,17 @@
     overflow: hidden;
   }
 
+  section {
+    flex-shrink: 0;
+    min-width: fit-content;
+  }
+
   .main {
     display: flex;
     flex-direction: row;
-    width: calc(430vw + 5vw);
+    /* width: calc(430vw + 5vw); */
+    width: max-content;
+    min-width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -105,20 +112,17 @@
 
   .blog-list {
     flex-direction: row;
-    row-gap: 82px;
+    gap: 82px;
     align-items: center;
+    width: max-content;
+    flex-wrap: nowrap; /* Гарантія, що не переносить елементи */
   }
 
   .blog-item {
     padding-top: 64px;
     padding-bottom: 64px;
-    padding-left: 64px;
-    padding-right: 64px;
-    align-items: center;
-  }
 
-  .blog-list .blog-item:last-child {
-    margin-right: 10vw;
+    align-items: center;
   }
 
   .horizontal {
@@ -138,7 +142,7 @@
   }
 
   .section img {
-    max-height: 69vh;
+    max-height: 65vh;
     max-width: 358px;
     object-fit: cover;
   }
@@ -154,24 +158,19 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .main {
-    width: calc(370vw + 5vw);
-  }
-
-  .blog-list .blog-item:last-child {
-    margin-right: 20vw;
-  }
-
   .hero-section {
     width: 583px;
   }
 
   .blog-list {
-    row-gap: 0;
+
+    gap: 8vw ;
+
   }
 
+
   .blog-card {
-    width: 504px;
+    min-width: 504px;
   }
 
   .img-description {
@@ -181,11 +180,10 @@
   .blog-item {
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 
   .section img {
+    min-width: 504px;
     max-height: 72vh;
     object-fit: cover;
   }
