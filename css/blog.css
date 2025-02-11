@@ -43,6 +43,10 @@
   display: none; 
 }
 
+.admin-controls{
+  margin-left: auto;
+}
+
 @media (min-width: 1024px) {
   .section-text-content {
     max-width: 452px;

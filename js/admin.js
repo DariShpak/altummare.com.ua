@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
   const urlParams = new URLSearchParams(window.location.search)
   const isAdmin = urlParams.get("admin") === "secretcode123"
 
@@ -10,208 +8,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addAdminButtons() {
     document.querySelectorAll(".article").forEach((postElement, index) => {
-      let postId = postElement.getAttribute("data-id") || `temp-${index + 1}`;
+      let postId = postElement.getAttribute("data-id") || `temp-${index + 1}`
 
       if (
-          postElement.querySelector(".edit-btn") ||
-          postElement.querySelector(".delete-btn")
+        postElement.querySelector(".edit-btn") ||
+        postElement.querySelector(".delete-btn")
       ) {
-        return;
+        return
       }
 
-      const editLink = document.createElement("a");
-      editLink.textContent = "✍🏻"
-      editLink.classList.add("edit-btn");
-      editLink.href = `https://altummare.com.ua/blog-post-editor.html?key=mySecretKey123123123&id=${postId}`;
-      editLink.style.cssText =
-          "display: inline-block; margin: 10px; padding: 5px 10px; border: 1px solid #4CAF50; background-color: #ffff; color: white; text-decoration: none; cursor: pointer;";
+      const editLink = document.createElement("a")
+      editLink.href = `https://altummare.com.ua/blog-post-editor.html?key=mySecretKey123123123&id=${postId}`
+      editLink.classList.add("edit-btn")
+      editLink.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="color:rgb(54, 55, 54);">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+  </svg>
+`
+      editLink.style.cssText = `
+  display: inline-block; margin: 10px; cursor: pointer; text-decoration: none;
+`
 
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "🚮"
-      deleteButton.classList.add("delete-btn");
-      deleteButton.style.cssText =
-          "margin: 10px; padding: 5px 10px; border: 1px solid #ff0000; background-color: #fff; color: black; cursor: pointer;";
+      const deleteButton = document.createElement("button")
+      deleteButton.classList.add("delete-btn")
+      deleteButton.innerHTML = `
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="color: rgb(54, 55, 54);">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+  </svg>
+`
+      deleteButton.style.cssText = `
+  background: none; border: none; cursor: pointer; margin: 10px;
+`
 
-   
-      const controlsContainer = document.createElement("div");
-      controlsContainer.classList.add("admin-controls");
-      controlsContainer.appendChild(editLink);
-      controlsContainer.appendChild(deleteButton);
+      const controlsContainer = document.createElement("div")
+      controlsContainer.classList.add("admin-controls")
+      controlsContainer.appendChild(editLink)
+      controlsContainer.appendChild(deleteButton)
 
-      postElement.appendChild(controlsContainer);
+      postElement.appendChild(controlsContainer)
 
-      deleteButton.addEventListener("click", () => deletePost(postElement, postId));
-    });
+      deleteButton.addEventListener("click", () =>
+        deletePost(postElement, postId)
+      )
+    })
   }
 
-  setTimeout(addAdminButtons, 500);
-});
+  setTimeout(addAdminButtons, 500)
+})
 
-// async function editPost(postElement, postId) {
-
-//   let titleElement = postElement.querySelector(".blog-title")
-//   let descriptionElement = postElement.querySelector(".section-text")
-//   let categoryElement = postElement.querySelector(".blog-category")
-//   let linksElement = postElement.querySelector(".blog-links")
-
-//   if (!titleElement) {
-//     titleElement = document.createElement("h2")
-//     titleElement.classList.add("blog-title")
-//     titleElement.innerText = "Без назви"
-//     postElement.prepend(titleElement)
-//   }
-
-//   if (!descriptionElement) {
-//     descriptionElement = document.createElement("p")
-//     descriptionElement.classList.add("section-text")
-//     descriptionElement.innerText = "Опис відсутній"
-//     postElement.appendChild(descriptionElement)
-//   }
-
-//   if (!categoryElement) {
-//     categoryElement = document.createElement("span")
-//     categoryElement.classList.add("blog-category")
-//     categoryElement.innerText = "Невідома категорія"
-//     postElement.appendChild(categoryElement)
-//   }
-
-//   if (!linksElement) {
-//     linksElement = document.createElement("p")
-//     linksElement.classList.add("blog-links")
-//     linksElement.innerText = ""
-//     postElement.appendChild(linksElement)
-//   }
- 
-//   const form = document.createElement("form")
-//   form.classList.add("form-generator")
-
-//   form.innerHTML = `
-//     <label for="category-${postId}" class="title">Обрати розділ:</label>
-//     <select id="category-${postId}" name="category">
-//       <option value="dreams-blog" ${
-//         categoryElement.innerText === "Сновидіння" ? "selected" : ""
-//       }>Сновидіння</option>
-//       <option value="art-blog" ${
-//         categoryElement.innerText === "Образи в мистецтві" ? "selected" : ""
-//       }>Образи в мистецтві</option>
-//       <option value="body-blog" ${
-//         categoryElement.innerText === "Тіло як провідник" ? "selected" : ""
-//       }>Тіло як провідник</option>
-//       <option value="astro-blog" ${
-//         categoryElement.innerText === "Астро-Навігація" ? "selected" : ""
-//       }>Астро-Навігація</option>
-//       <option value="reading-blog" ${
-//         categoryElement.innerText === "Читальня" ? "selected" : ""
-//       }>Читальня</option>
-//     </select>
-
-//     <label for="title-${postId}" class="title">Назва:</label>
-//     <input type="text" id="title-${postId}" name="title" required class="form-input" value="${
-//     titleElement.innerText
-//   }" />
-
-//     <label for="description-${postId}" class="title">Текст посту:</label>
-//     <textarea id="description-${postId}" name="description" required class="form-input">${
-//     descriptionElement.innerText
-//   }</textarea>
-
-//     <label for="links-${postId}" class="title">Посилання (через кому):</label>
-//     <input type="text" id="links-${postId}" name="links" class="form-input" value="${
-//     linksElement ? linksElement.innerText : ""
-//   }" />
-
-//     <button type="submit" class="submit-btn">💾 Зберегти</button>
-//   `
-
-//   // Замінюємо старий контент на форму
-//   postElement.innerHTML = ""
-//   postElement.appendChild(form)
-
-//   // Обробка сабміту форми
-//   form.addEventListener("submit", async (event) => {
-//     event.preventDefault()
-
-//     const updatedCategory = form.querySelector(`#category-${postId}`).value
-//     const updatedTitle = form.querySelector(`#title-${postId}`).value
-//     const updatedDescription = form.querySelector(
-//       `#description-${postId}`
-//     ).value
-//     const updatedLinks = form.querySelector(`#links-${postId}`).value
-
-//     try {
-//       const response = await fetch(
-//         `http://altummare.com.ua/api.php?id=${postId}`,
-//         {
-//           method: "PUT",
-//           headers: {
-//             "Content-Type": "application/x-www-form-urlencoded"
-//           },
-//           body: new URLSearchParams({
-//             CategoryId: updatedCategory,
-//             Title: updatedTitle,
-//             Description: updatedDescription,
-//             Links: updatedLinks
-//           })
-//         }
-//       )
-
-//       const result = await response.json()
-//       console.log("✅ Update Response:", result)
-
-//       if (response.ok) {
-//         // Повертаємо оновлений контент назад у пост
-//         postElement.innerHTML = `
-//           <h2 class="blog-title">${updatedTitle}</h2>
-//           <p class="section-text">${updatedDescription.replace(
-//             /\n/g,
-//             "<br>"
-//           )}</p>
-//           <span class="blog-category">${updatedCategory}</span>
-//           ${updatedLinks ? `<p class="blog-links">${updatedLinks}</p>` : ""}
-//           <button class="edit-btn">✏️ Редагувати</button>
-//           <button class="delete-btn">❌ Видалити</button>
-//         `
-
-//         // Додаємо події на нові кнопки
-//         postElement
-//           .querySelector(".edit-btn")
-//           .addEventListener("click", () => editPost(postElement, postId))
-//         postElement
-//           .querySelector(".delete-btn")
-//           .addEventListener("click", () => deletePost(postElement, postId))
-//       } else {
-//         alert("❌ Помилка оновлення поста.")
-//       }
-//     } catch (error) {
-//       console.error("❌ Error updating post:", error)
-//       alert("❌ Помилка оновлення поста.")
-//     }
-//   })
-// }
-
-
-
-// Функція видалення поста через API
 async function deletePost(postElement, postId) {
   if (!confirm("⚠️ Ви впевнені, що хочете видалити цей пост?")) {
-    return;
+    return
   }
 
   try {
-    const response = await fetch(`https://altummare.com.ua/api.php?id=${postId}`, {
-      method: "DELETE" // API очікує DELETE дію через GET-запит
-    });
+    const response = await fetch(
+      `https://altummare.com.ua/api.php?id=${postId}`,
+      {
+        method: "DELETE"
+      }
+    )
 
-    const result = await response.json();
-    console.log("✅ Delete Response:", result);
+    const result = await response.json()
 
     if (response.ok) {
-      postElement.remove();
+      postElement.remove()
     } else {
-      alert("❌ Помилка видалення поста.");
+      alert("❌ Помилка видалення поста.")
     }
   } catch (error) {
-    console.error("❌ Error deleting post:", error);
-    alert("❌ Помилка видалення поста.");
+    alert("❌ Помилка видалення поста.")
   }
 }
