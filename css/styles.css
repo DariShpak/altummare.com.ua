@@ -48,6 +48,7 @@ ol {
 img {
   display: block;
   height: auto;
+  width: 100%;
 }
 
 .list {
@@ -129,9 +130,9 @@ img {
   font-size: 15px;
 }
 
-
-.section-img-wrap img {
+.section-img-wrap {
   max-width: 310px;
+  object-fit: cover; /* Запобігає обрізанню */
 }
 
 .more-btn,
@@ -227,6 +228,8 @@ img {
   padding-bottom: 16px;
 
   margin-left: auto;
+
+  max-width: 160px;
 }
 
 /* ================= MOB MENU STYLES ================= */
@@ -248,7 +251,7 @@ img {
 }
 
 .mob-menu {
-  top: 80;
+  top: 70;
   position: absolute;
   right: 20px;
   left: 20px;
@@ -275,6 +278,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
 .mob-menu-list-item {
   display: flex;
   justify-content: center;
@@ -304,6 +308,8 @@ img {
 .footer-logo-wrap {
   margin-left: auto;
   margin-right: auto;
+
+  max-width: 80px;
 }
 
 .heart-icon {
@@ -415,6 +421,7 @@ textarea {
 .hidden {
   display: none;
 }
+
 #successMessage {
   display: none;
   text-align: center;
@@ -444,6 +451,26 @@ textarea {
     padding-right: 48px;
   }
 
+  .header-logo-wrap{
+    max-width: 200px;
+  }
+
+
+.mob-menu {
+  top: 70;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  color: var(--dark-color);
+  width: 90%;
+  max-width: 768px;
+  height: 100vh;
+  padding: 20px;
+  display: none;
+  z-index: 999;
+}
+
   .section {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -453,10 +480,9 @@ textarea {
     font-size: 40px;
   }
 
-  .section-img-wrap img {
+  .section-img-wrap {
     min-width: 672px;
   }
-
 
   .footer-container {
     flex-direction: row;
@@ -483,6 +509,7 @@ textarea {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .header-container {
     display: flex;
     align-items: center;
@@ -507,7 +534,7 @@ textarea {
     display: none;
   }
 
-  .section-img-wrap img {
+  .section-img-wrap {
     min-width: 358px;
   }
 
@@ -530,9 +557,8 @@ textarea {
     padding-bottom: 64px;
   }
 
-  .section-img-wrap img {
+  .section-img-wrap {
     min-width: 504px;
     object-fit: cover;
   }
-
 }
