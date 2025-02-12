@@ -77,7 +77,6 @@
   .main {
     display: flex;
     flex-direction: row;
-    /* width: calc(430vw + 5vw); */
     width: max-content;
     min-width: 100vw;
     height: 100vh;
@@ -115,7 +114,7 @@
     gap: 82px;
     align-items: center;
     width: max-content;
-    flex-wrap: nowrap; /* Гарантія, що не переносить елементи */
+    flex-wrap: nowrap; 
   }
 
   .blog-item {
@@ -143,6 +142,7 @@
 
   .section img {
     max-height: 65vh;
+
     max-width: 358px;
     object-fit: cover;
   }
@@ -163,11 +163,8 @@
   }
 
   .blog-list {
-
-    gap: 8vw ;
-
+    gap: 8vw;
   }
-
 
   .blog-card {
     min-width: 504px;

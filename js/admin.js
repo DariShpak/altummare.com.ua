@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search)
-  const isAdmin = urlParams.get("admin") === "secretcode123"
+  const isAdmin = urlParams.get("admin") === "A7f3K9dX2pQ5Z1mB"
 
   if (!isAdmin) {
     return
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const editLink = document.createElement("a")
-      editLink.href = `https://altummare.com.ua/blog-post-editor.html?key=mySecretKey123123123&id=${postId}`
+      editLink.href = `https://altummare.com.ua/blog-post-editor.html?key=A7f3K9dX2pQ5Z1mB&id=${postId}`
       editLink.classList.add("edit-btn")
       editLink.innerHTML = `
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="color:rgb(54, 55, 54);">

@@ -1,3 +1,5 @@
+
+
 document
   .getElementById("postForm")
   .addEventListener("submit", function (event) {
@@ -12,7 +14,6 @@ document
     }
 
     const categoryKey = document.getElementById("category").value
-
     const categoryId = categoryMapping[categoryKey]
 
     if (!categoryId) {
@@ -23,7 +24,6 @@ document
     const description = document.getElementById("description").value
 
     const linksInput = document.getElementById("links").value
-
     const linksArray = linksInput
       .split(",")
       .map((link) => link.trim())
@@ -52,6 +52,12 @@ document
 
         if (data.success) {
           clearForm()
+
+          // Додаємо редірект на сторінку відповідної категорії
+          const redirectUrl = `https://altummare.com.ua/${categoryKey}.html`
+          setTimeout(() => {
+            window.location.href = redirectUrl
+          }, 2000) // Затримка 2 секунди для візуального підтвердження
         }
       })
       .catch((error) => {

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const accessKey = urlParams.get("key")
   const postId = urlParams.get("id")
 
-  if (accessKey !== "mySecretKey123123123") {
+  if (accessKey !== "A7f3K9dX2pQ5Z1mB") {
     alert("⛔ Доступ заборонено!")
     window.location.href = "index.html"
     return
@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   if (postId) {
-
     try {
       const response = await fetch(
         `https://altummare.com.ua/api.php?id=${postId}`
@@ -77,15 +76,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         )
 
         const result = await response.json()
-        console.log("✅ Update Response:", result)
 
         if (response.ok) {
           alert("✅ Пост успішно оновлено!")
 
           const redirectUrl = `https://altummare.com.ua/${categoryMapping[updatedCategoryId]}.html`
 
-          console.log(`🔀 Перенаправлення на: ${redirectUrl}`)
-          window.location.href = redirectUrl // Перенаправлення на сторінку категорії
+          window.location.href = redirectUrl 
         } else {
           alert("❌ Помилка оновлення поста.")
         }

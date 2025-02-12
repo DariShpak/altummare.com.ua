@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const categoryId = categoryMapping[pageCategory]
-  let currentlyOpenPost = null // Для зберігання відкритого поста
+  let currentlyOpenPost = null
 
   async function fetchPostsByCategory() {
     try {
@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const posts = await response.json()
       displayPosts(posts)
-    } catch (error) {
-      console.error("Помилка завантаження постів:", error)
-    }
+    } catch (error) {}
   }
 
   function displayPosts(posts) {
@@ -87,11 +85,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
             linksArray.forEach((link) => {
               if (typeof link === "string" && link.trim() !== "") {
+                const url = new URL(link.trim())
+                let domain = url.hostname.replace("www.", "").split(".")[0]
+
+                if (url.hostname.includes("telegram.org")) {
+                  domain = "telegram"
+                }
+
+                const siteIcons = {
+                  youtube: "▶️", // YouTube icon
+                  facebook: "📘", // Facebook icon
+                  instagram: "📷", // Instagram icon
+                  twitter: "🐦", // Twitter icon
+                  linkedin: "🔗", // LinkedIn icon
+                  github: "🐙", // GitHub icon
+                  reddit: "👽", // Reddit icon
+                  telegram: "📨" // Telegram icon
+                }
+
+                const icon = siteIcons[domain] || "🌐"
+
                 const linkElement = document.createElement("a")
+                linkElement.classList.add("link", "section-text")
                 linkElement.href = link.trim()
-                linkElement.textContent = link.trim()
+                linkElement.innerHTML = `${icon} ${
+                  domain.charAt(0).toUpperCase() + domain.slice(1)
+                }`
                 linkElement.target = "_blank"
                 linkElement.rel = "noopener noreferrer"
+
                 linksContainer.appendChild(linkElement)
                 linksContainer.appendChild(document.createElement("br"))
               }
@@ -99,15 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             articleContent.appendChild(linksContainer)
           }
-        } catch (e) {
-          console.error("Помилка обробки посилань:", e)
-        }
+        } catch (e) {}
       }
 
       titleElement.addEventListener("click", () => {
         const isHidden = articleContent.style.display === "none"
 
-        // Закриваємо попередній відкритий пост, якщо є
         if (currentlyOpenPost && currentlyOpenPost !== articleContent) {
           currentlyOpenPost.style.display = "none"
           currentlyOpenPost.previousElementSibling.querySelector(
@@ -115,13 +134,11 @@ document.addEventListener("DOMContentLoaded", () => {
           ).style.transform = "rotate(0deg)"
         }
 
-        // Відкриваємо або закриваємо поточний пост
         articleContent.style.display = isHidden ? "block" : "none"
         svgElement.style.transform = isHidden
           ? "rotate(180deg)"
           : "rotate(0deg)"
 
-        // Оновлюємо змінну для відстеження відкритого поста
         currentlyOpenPost = isHidden ? articleContent : null
       })
 

@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// ====== Плавний скрол на планшетах (імітація нативного прокручування) ======
 let touchStartX = 0
 let lastTouchMoveX = 0
 let velocity = 0
@@ -52,39 +51,38 @@ let isTouching = false
 let momentumInterval
 
 main.addEventListener("touchstart", function (e) {
-  if (window.innerWidth < 1024) return // Виходимо, якщо мобільний екран
+  if (window.innerWidth < 1024) return
 
   touchStartX = e.touches[0].clientX
   lastTouchMoveX = touchStartX
   isTouching = true
   velocity = 0
-  clearInterval(momentumInterval) // Зупиняємо інерцію, якщо вже йшла
+  clearInterval(momentumInterval)
 })
 
 main.addEventListener("touchmove", function (e) {
-  if (window.innerWidth < 1024) return // Дозволяємо стандартний скрол на мобільних
+  if (window.innerWidth < 1024) return
 
   let touchMoveX = e.touches[0].clientX
   let distanceX = lastTouchMoveX - touchMoveX
-  velocity = distanceX * 0.6 // Зменшуємо різкість руху, робимо плавніше
+  velocity = distanceX * 0.6
 
   window.scrollBy({
-    top: velocity, // Плавний скролінг
+    top: velocity,
     behavior: "instant"
   })
 
   lastTouchMoveX = touchMoveX
-  e.preventDefault() // Блокуємо стандартний скрол ТІЛЬКИ НА ПЛАНШЕТАХ і ДЕСКТОПАХ
+  e.preventDefault()
 })
 
 main.addEventListener("touchend", function () {
-  if (window.innerWidth < 1024) return // Виходимо, якщо мобільний екран
+  if (window.innerWidth < 1024) return
 
   isTouching = false
   startMomentumScroll()
 })
 
-// ====== Імітація інерції після свайпу ======
 function startMomentumScroll() {
   momentumInterval = setInterval(() => {
     if (Math.abs(velocity) < 0.5) {
@@ -97,18 +95,17 @@ function startMomentumScroll() {
       behavior: "instant"
     })
 
-    velocity *= 0.95 // Поступове сповільнення (ефект інерції)
-  }, 16) // Майже 60 FPS
+    velocity *= 0.95
+  }, 16)
 }
 
-// ====== Горизонтальний скрол на тачпадах ======
 main.addEventListener(
   "wheel",
   function (e) {
     if (window.innerWidth >= 1024) {
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
         window.scrollTo({
-          top: window.scrollY + e.deltaX * 2, // Плавне горизонтальне гортання
+          top: window.scrollY + e.deltaX * 2,
           behavior: "instant"
         })
 
