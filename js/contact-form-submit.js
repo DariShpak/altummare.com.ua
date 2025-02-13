@@ -2,10 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form")
   const successMessage = document.getElementById("successMessage")
   const modal = document.getElementById("contactModal")
+  const sourceInput = document.getElementById("source-input")
+  const openFormButtons = document.querySelectorAll(".openModalBtn")
 
-  if (!form || !successMessage || !modal) {
+  if (!form || !successMessage || !modal || !sourceInput) {
     return
   }
+
+  openFormButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const source = this.getAttribute("data-source") || "Невідоме джерело"
+      sourceInput.value = source 
+    })
+  })
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault()

@@ -53,7 +53,10 @@
         <nav class="header-nav-list list">
           <ul class="header-nav-list list">
             <li class="header-nav-item">
-              <button class="more-btn btn-link openModalBtn link">
+              <button
+                class="more-btn btn-link openModalBtn link"
+                data-source="main-btn"
+              >
                 Звʼязатися
               </button>
             </li>
@@ -127,7 +130,9 @@
               <a href="./services.html" class="mob-menu-link link">Послуги</a>
             </li>
             <li class="mob-menu-list-item">
-              <button class="openModalBtn link">Звʼязатися</button>
+              <button class="openModalBtn link" data-source="main-btn">
+                Звʼязатися
+              </button>
             </li>
             <li class="mob-menu-list-item">
               <ul class="socials list">
@@ -141,7 +146,7 @@
                     >TG</a
                   >
                 </li>
-               <li class="socials-item">
+                <li class="socials-item">
                   <p class="mob-menu-link link">IN</p>
                   <!-- <a href="" class="link">IN</a> -->
                 </li>
@@ -169,7 +174,11 @@
                   та енергію. Інтегруємо бажання та потреби, які прагнуть
                   реалізуватися.
                 </p>
-                <button type="button" class="cta-button openModalBtn">
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="dream-decoding-service"
+                >
                   Замовити послугу
                 </button>
               </div>
@@ -195,7 +204,11 @@
                   багатовимірність одного сну. Динаміка групи посилює реалізацію
                   в житті.
                 </p>
-                <button type="button" class="cta-button openModalBtn">
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="dreams-PRO-service"
+                >
                   Замовити послугу
                 </button>
               </div>
@@ -220,7 +233,11 @@
                   інструмент, який запускає контакт між почуттями та аналізом.
                   Мета - відчуття цілісності та задоволення.
                 </p>
-                <button type="button" class="cta-button openModalBtn">
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="movie-therapy-service"
+                >
                   Замовити послугу
                 </button>
               </div>
@@ -245,7 +262,11 @@
                   емоцій, розуміння життєвих ситуацій. Розпакування емоційних
                   блоків, трансгенераційних програм.
                 </p>
-                <button type="button" class="cta-button openModalBtn">
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="body-service"
+                >
                   Замовити послугу
                 </button>
               </div>
@@ -269,7 +290,11 @@
                   допомагає навести радари, відкалібрувати внутрішній компас та
                   звіритися із зоряною погодою.
                 </p>
-                <button type="button" class="cta-button openModalBtn">
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="astro-navigation-service"
+                >
                   Замовити послугу
                 </button>
               </div>
@@ -311,7 +336,7 @@
     <div id="contactModal" class="modal hidden">
       <div class="form-container">
         <form
-          action="https://formspree.io/f/meoezndk"
+          action="https://formspree.io/f/xzzdayal"
           method="POST"
           class="contact-form"
           id="contact-form"
@@ -336,7 +361,7 @@
             Маєте запит, ідеї або питання? Напишіть, і ми разом створимо
             комфортний простір для спілкування та змін.
           </p>
-
+          <input type="hidden" name="source" id="source-input" />
           <label for="name">Ім’я</label>
           <input type="text" id="name" name="name" required />
 

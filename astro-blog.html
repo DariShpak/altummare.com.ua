@@ -53,7 +53,10 @@
         <nav class="header-nav-list list">
           <ul class="header-nav-list list">
             <li class="header-nav-item">
-              <button class="more-btn btn-link openModalBtn link">
+              <button
+                class="more-btn btn-link openModalBtn link"
+                data-source="main-btn"
+              >
                 Звʼязатися
               </button>
             </li>
@@ -127,7 +130,9 @@
               <a href="./services.html" class="mob-menu-link link">Послуги</a>
             </li>
             <li class="mob-menu-list-item">
-              <button class="openModalBtn link">Звʼязатися</button>
+              <button class="openModalBtn link" data-source="main-btn">
+                Звʼязатися
+              </button>
             </li>
             <li class="mob-menu-list-item">
               <ul class="socials list">
@@ -204,7 +209,7 @@
     <div id="contactModal" class="modal hidden">
       <div class="form-container">
         <form
-          action="https://formspree.io/f/meoezndk"
+          action="https://formspree.io/f/xzzdayal"
           method="POST"
           class="contact-form"
           id="contact-form"
@@ -229,7 +234,7 @@
             Маєте запит, ідеї або питання? Напишіть, і ми разом створимо
             комфортний простір для спілкування та змін.
           </p>
-
+          <input type="hidden" name="source" id="source-input" />
           <label for="name">Ім’я</label>
           <input type="text" id="name" name="name" required />
 
