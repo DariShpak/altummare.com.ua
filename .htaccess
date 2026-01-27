@@ -1,0 +1,21 @@
+# Увімкнути RewriteEngine
+RewriteEngine On
+
+# Редірект з www на без www (опціонально)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Редірект з .html на чисті URL
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Додати .html до запитів без розширення
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ $1.html [L]
+
+# Для файлів з -blog в назві (dreams-blog, art-blog тощо)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1-blog.html -f
+RewriteRule ^([^/]+)/?$ $1-blog.html [L]
