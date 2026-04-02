@@ -14,6 +14,12 @@
   gap: 16px;
 }
 
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 @media screen and (min-width: 768px) {
   .services-list {
     gap: 64px;
@@ -25,7 +31,6 @@
 }
 
 @media (min-width: 1024px) {
-
   .section-text-content {
     max-width: 452px;
     flex: 1;
