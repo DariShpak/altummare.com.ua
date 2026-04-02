@@ -1,0 +1,410 @@
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altum Mare Про мене</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css?v=1.1" />
+    <link rel="stylesheet" href="./css/services.css?v=1.1" />
+  </head>
+  <body>
+    <button id="scroll-to-top" class="scroll-to-top-btn home-page-scroll-btn">
+      <svg class="scroll-up-icon" width="30" height="30">
+        <use href="./images/icons/icons.svg#icon-up"></use>
+      </svg>
+    </button>
+    <header class="header">
+      <div class="container header-container">
+        <nav class="header-nav">
+          <ul class="header-nav-list list">
+            <li class="header-nav-item">
+              <a href="/" class="link more-btn btn-link">Майстерня</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="/services" class="link more-btn btn-link">Послуги</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-logo-wrap">
+          <a href="/" class="link">
+            <img
+              src="./images/logos/logo-header.png"
+              alt="логотип копанії"
+              width="180"
+              loading="lazy"
+          /></a>
+        </div>
+        <nav class="header-nav-list list">
+          <ul class="header-nav-list list">
+            <li class="header-nav-item">
+              <button
+                class="more-btn btn-link openModalBtn link"
+                data-source="main-btn"
+              >
+                Звʼязатися
+              </button>
+            </li>
+            <li class="header-nav-item">
+              <ul class="socials list">
+                <li class="socials-item">
+                  <a
+                    href="https://t.me/snovydinnyapro"
+                    class="link more-btn btn-link"
+                    target="_blank"
+                    rel="no-opener no-referrer no-follow noopener norefferrer nofollow"
+                    aria-label="telegram"
+                    >TG</a
+                  >
+                </li>
+                <li class="socials-item">
+                  <p class="link more-btn btn-link">IN</p>
+                  <!-- <a href="" class="link more-btn btn-link">IN</a> -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- MOB-MENU -->
+        <button class="mob-menu-btn" type="button" aria-label="Відкрити меню">
+          <svg class="mob-menu-icon" id="menu-icon" width="35" height="35">
+            <use
+              href="./images/icons/icons.svg#icon-burger"
+              class="icon-burger"
+              id="icon-burger"
+            ></use>
+            <use
+              href="./images/icons/icons.svg#icon-close"
+              class="icon-close hidden"
+              id="icon-close"
+            ></use>
+          </svg>
+        </button>
+
+        <nav class="mob-menu" id="mob-menu">
+          <ul class="mob-menu-list">
+            <li class="mob-menu-list-item">
+              <a href="/" class="mob-menu-link link">Майстерня</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/dreams" class="mob-menu-link link">Сновидіння</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/art" class="mob-menu-link link">Образи в мистецтві</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/body" class="mob-menu-link link">Тіло як провідник</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/astro" class="mob-menu-link link">Астро-Навігація</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/reading" class="mob-menu-link link">Читальня</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <a href="/services" class="mob-menu-link link">Послуги</a>
+            </li>
+            <li class="mob-menu-list-item">
+              <button class="openModalBtn link" data-source="main-btn">
+                Звʼязатися
+              </button>
+            </li>
+            <li class="mob-menu-list-item">
+              <ul class="socials list">
+                <li class="socials-item">
+                  <a
+                    href="https://t.me/snovydinnyapro"
+                    class="link"
+                    target="_blank"
+                    rel="no-opener no-referrer no-follow noopener norefferrer nofollow"
+                    aria-label="telegram"
+                    >TG</a
+                  >
+                </li>
+                <li class="socials-item">
+                  <p class="mob-menu-link link">IN</p>
+                  <!-- <a href="" class="link">IN</a> -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section services-section" id="services-section">
+        <div class="container services-container">
+          <h2 class="section-title visually-hidden">Наші послуги</h2>
+
+          <ul class="services-list list">
+            <li class="services-list-item">
+              <div class="section-text-content">
+                <h2 class="section-subtitle">
+                  Глибинна робота: шлях до внутрішньої цілісності
+                </h2>
+                <p class="section-text">Індивідуальний формат</p>
+                <p class="section-text">
+                  Я запрошую вас у спільний безпечний простір, де ваша психіка
+                  може нарешті розгорнутися, бути почутою та зрозумілою. Це
+                  дбайливе дослідження того, що приховано за фасадом
+                  повсякденності. Разом ми знайдемо корінь внутрішнього
+                  конфлікту та звільнимо ресурс, який досі витрачався на опір
+                  або тривогу.
+                </p>
+                <h3 class="section-subtitle section-text-min">
+                  З якими запитами ми працюємо:
+                </h3>
+                <ul class="list item-list">
+                  <li class="item section-text">
+                    <b> Пошук внутрішньої опори</b>: коли здається, що світ
+                    навколо "несеться", а грунт під ногами зникає.
+                  </li>
+                  <li class="item section-text">
+                    <b>Самоцінність та ідентичність</b>: зустріч із собою
+                    справжнім, прийняття своєї Тіні та талантів.
+                  </li>
+                  <li class="item section-text">
+                    <b> Стосунки та межі</b>: як бути поруч з іншими, не
+                    втрачаючи себе.
+                  </li>
+                  <li class="item section-text">
+                    <b>
+                      Стани апатії, роздратування чи вигорання, провини та
+                      сорому:</b
+                    >
+                    розмороження почуттів та повернення смаку до життя.
+                  </li>
+                  <li class="item section-text">
+                    <b>Робота та реалізація:</b> пошук сенсів та творчої енергії
+                    для нових кроків.
+                  </li>
+                </ul>
+                <h3 class="section-subtitle section-text-min">
+                  Формат та вартість:
+                </h3>
+                <p class="section-text">
+                  Трансформація потребує часу та дбайливого ритму. Для того, щоб
+                  ми могли не просто торкнутися поверхні, а зайти у глибину та
+                  закріпити результат, я рекомендую цикл із 4-х зустрічей.
+                </p>
+                <ul class="list item-list">
+                  <li class="item section-text">
+                    <b> Формат: </b>
+                    Онлайн-зустріч тривалістю 1 година
+                  </li>
+                  <li class="item section-text">
+                    <b>Разова сесія:</b>
+                    2 000 грн.
+                  </li>
+                  <li class="item section-text">
+                    <b>Комплекс (4 сесії):</b>6 000 грн (можливість
+                    налаштуватися на системну роботу зі своєю душею).
+                  </li>
+                  <li class="item section-text">
+                    <b>Рекомендована частота:</b>1 раз на тиждень (це дозволяє
+                    психіці інтегрувати отриманий досвід).
+                  </li>
+                </ul>
+                <p class="section-text">
+                  <b>
+                    Я буду поруч, щоб підтримати вас у цій зустрічі із собою. Ви
+                    не маєте проходити цей шлях наодинці.</b
+                  >
+                </p>
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="dream-decoding-service"
+                >
+                  Замовити
+                </button>
+              </div>
+              <div class="section-img-wrap">
+                <img
+                  src="./images/img/serv-1.jpg"
+                  alt="природний вир"
+                  width="310"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+
+            <li class="services-list-item">
+              <div class="section-text-content">
+                <h2 class="section-subtitle">Консультація Астро-навігація</h2>
+                <p class="section-text">Індивідуальний формат</p>
+                <p class="section-text">
+                  Кожен день народження — це не просто свято, а момент, коли
+                  Сонце повертається у ту саму точку, де воно було в мить вашого
+                  народження. Це точка перезавантаження, у якій формується ваш
+                  <b> особистий сценарій на наступні 12 місяців.</b>
+                </p>
+                <p class="section-text">
+                  Прочитання Соляру — це можливість зазирнути за «лаштунки неба»
+                  та зрозуміти, яка «погода» чекає на вас у цьому році. Це не
+                  прогноз долі, який неможливо змінити, а
+                  <b>навігаційна карта</b>, що допомагає рухатися в гармонії з
+                  архетипічними енергіями всесвіту.
+                </p>
+                <h3 class="section-subtitle section-text-min">
+                  Що дає розуміння Соляру:
+                </h3>
+                <ul class="item-list">
+                  <li class="section-text item">
+                    <b> Розуміння фокусу року:</b>
+                    де буде ваша енергія — у кар’єрі, стосунках, самопізнанні чи
+                    зміні місця проживання?
+                  </li>
+                  <li class="section-text item">
+                    <b>Зменшення супротиву:</b> коли ви знаєте «прогноз», ви не
+                    намагаєтеся пливти проти течії, а використовуєте силу вітру.
+                  </li>
+                  <li class="section-text item">
+                    <b> Мінімізація ризиків:</b>
+                    ми побачимо напружені аспекти та знайдемо способи їхньої
+                    <b>компенсації</b> (спрямування енергії в конструктивне
+                    русло).
+                  </li>
+                  <li class="section-text item">
+                    <b> Свобода вибору:</b>
+                    знання солярних енергій не скасовує ваших планів, а робить
+                    їхню реалізацію більш точною та менш енерговитратною.
+                  </li>
+                </ul>
+                <h3 class="section-subtitle section-text-min">
+                  Як проходить зустріч:
+                </h3>
+                <ul class="item-list list">
+                  <li>
+                    <b>Формат:</b>
+                    Онлайн-зустріч тривалістю 1 - 1,5 години.
+                  </li>
+                  <b>Результат:</b>
+                  <li>
+                    Глибокий розбір основних тенденцій року, важливих періодів
+                    та сфер реалізації.
+                  </li>
+                  <b>Матеріали після зустрічі:</b>
+                  <li>
+                    * Аудіозапис нашої розмови (щоб ви могли повернутися до неї
+                    у будь-який момент) та Коротке письмове резюме з ключовими
+                    рекомендаціями та способами «проживання» складних аспектів.
+                  </li>
+                  <li><b>Вартість послуги:</b>а 5 000 грн.</li>
+                </ul>
+                <button
+                  type="button"
+                  class="cta-button openModalBtn"
+                  data-source="astro-navigation-service"
+                >
+                  Замовити послугу
+                </button>
+              </div>
+              <div class="section-img-wrap">
+                <img
+                  src="./images/img/serv-5.jpg"
+                  alt="місяць в жіночих руках"
+                  width="310"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo-wrap">
+          <a href="/"
+            ><img
+              src="./images/logos/logo-footer.png"
+              alt="логотип компанії"
+              width="80"
+              loading="lazy"
+          /></a>
+        </div>
+        <p class="footer-text">&copy; Altum Mare 2025</p>
+        <p class="footer-text">
+          Developed with
+          <svg class="heart-icon" width="20" height="12">
+            <use href="./images/icons/icons.svg#icon-heart"></use>
+          </svg>
+          by Dari Shpak
+        </p>
+      </div>
+    </footer>
+    <!-- Модальне вікно -->
+    <div id="contactModal" class="modal hidden">
+      <div class="form-container">
+        <form
+          action="https://formspree.io/f/xzzdayal"
+          method="POST"
+          class="contact-form"
+          id="contact-form"
+        >
+          <h2 class="section-title">Давайте поговоримо</h2>
+          <button class="close" type="button" aria-label="Закрити меню">
+            <svg
+              class="mob-menu-icon close"
+              id="modal-menu-icon"
+              width="35"
+              height="35"
+            >
+              <use
+                href="./images/icons/icons.svg#icon-close"
+                class="icon-close"
+                id="modal-icon-close"
+              ></use>
+            </svg>
+          </button>
+
+          <p class="section-text">
+            Маєте запит, ідеї або питання? Напишіть, і ми разом створимо
+            комфортний простір для спілкування та змін.
+          </p>
+          <input type="hidden" name="source" id="source-input" />
+          <label for="name">Ім’я</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="contact">Контактна інформація</label>
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            placeholder="Email або Telegram"
+            required
+          />
+
+          <label for="message">Ваш запит</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="submit-btn">Надіслати</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+          <h3>Дякуємо!</h3>
+          <p>Ми отримали ваш запит і зв’яжемося з вами найближчим часом.</p>
+          <a href="index.html" class="back-link">Повернутися на головну</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/modal.js?v=1.1"></script>
+    <script type="module" src="./js/contact-form-submit.js?v=1.1"></script>
+    <script type="module" src="./js/mob-menu.js?v=1.1"></script>
+    <script type="module" src="./js/scroll-to-top.js?v=1.1"></script>
+  </body>
+</html>
