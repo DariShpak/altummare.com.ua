@@ -140,7 +140,7 @@ img {
   display: flex;
   gap: 6px;
   align-items: center;
-width: fit-content;
+  width: fit-content;
 
   background-color: transparent;
   border: none;
@@ -165,7 +165,9 @@ width: fit-content;
   width: 0%;
   height: 1px;
   background-color: var(--dark-color);
-  transition: width 0.3s ease, left 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
   transform: translateX(-50%);
 }
 
@@ -180,8 +182,10 @@ width: fit-content;
   background-color: #fff;
 
   border-style: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0,
+    rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
   color: #3c4043;
   font-size: 15px;
@@ -194,13 +198,15 @@ width: fit-content;
 
   width: 160px;
 
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .cta-button:hover,
 .cta-button:focus {
   border-color: rgba(255, 255, 255, 0.05);
-  box-shadow: inset -8px -7px 10px #fff, inset 8px 7px 10px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    inset -8px -7px 10px #fff,
+    inset 8px 7px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* ================= HEADER STYLES ================= */
